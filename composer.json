@@ -2,11 +2,12 @@
     "name": "gud3/executer",
     "description": "This extension works with files both locally and remotely",
     "type": "executer",
+    "version": "1.0.0",
     "keywords": ["executer","ssh2", "exec", "exec asunc"],
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "Evgenii Kirichenko",
+            "name": "Eugene Kirichenko",
             "email": "gud3.ini@gmail.com"
         }
     ],
