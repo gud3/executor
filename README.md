@@ -2,6 +2,8 @@ Executer
 ===========
 This extension works with files both locally and remotely. It can run commands in console mode. 
 There are two different flags for execution with a response from the command and without (then the script will not wait for execution, an imitation of asynchronous execution).
+There are three public methods for working with the class: exec(), getFile(), setFile(). Each of the functions has a number of input parameters from which you can see below.
+To connect to the ssh2 in the constructor of the object, you need to transfer the data for the connection.
 
 Installation
 ------------
@@ -11,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist gud3/yii2-executer "*"
+php composer.phar require --prefer-dist gud3/executer "*"
 ```
 
 or add
 
 ```
-"gud3/yii2-executer": "*"
+"gud3/executer": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -49,7 +51,7 @@ To connect via the protocol, you must enter the IP address, login and password.
 
 ```
 $connect = new gud3\Ssh2($ip, $login, $password, $port);
-$console = $connect->exec('command');
+$console = $connect->exec(['command1', 'command2', 'command3']);
 ```
 
 You can get the contents of the file as follows:
