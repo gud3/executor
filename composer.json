@@ -1,0 +1,27 @@
+{
+    "name": "gud3/executer",
+    "description": "This extension works with files both locally and remotely",
+    "type": "executer",
+    "keywords": ["executer","ssh2", "exec", "exec asunc"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Evgenii Kirichenko",
+            "email": "gud3.ini@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-ssh2" : "*",
+    },
+    "autoload": {
+        "psr-4": {
+            "gud3\\executer\\": ""
+        }
+    },
+    "repositories":[
+        {
+            "type": "git",
+            "url": "https://github.com/gud3/executer"
+        }
+    ]
+}
