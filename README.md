@@ -2,7 +2,7 @@ Executer
 ===========
 This extension works with files both locally and remotely. It can run commands in console mode. 
 There are two different flags for execution with a response from the command and without (then the script will not wait for execution, an imitation of asynchronous execution).
-There are three public methods for working with the class: exec(), getFile(), setFile(). Each of the functions has a number of input parameters from which you can see below.
+There are three public methods for working with the class: `exec(), getFile(), setFile()`. Each of the functions has a number of input parameters from which you can see below.
 To connect to the ssh2 in the constructor of the object, you need to transfer the data for the connection.
 
 Installation
@@ -10,7 +10,7 @@ Installation
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-Either run
+Enter run
 
 ```
 php composer.phar require --prefer-dist gud3/executer "*"
@@ -68,4 +68,6 @@ $file = $local->getFile($path_to_file, $file_name);
 
 Overwrite the file if it exists. If the file does not exist then it will be created
 -----
+```
 $result = $local->setFile($path_to_file, $file_name, $content);
+```
