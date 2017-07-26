@@ -36,26 +36,27 @@ abstract class ExecuteAbstract
      */
     protected function getCommandFlag(&$command, $async)
     {
-        $os = $this->checkOs();
-        switch ($os) {
-        case self::OS_LINUX:
-            if ($async) {
-                $command = $command . ' > /dev/null &';
-            }
-            break;
-        case self::OS_WINDOWS:
-            // TODO review
-            //$command = str_replace(';', '&', $command);
-            if ($async) {
-                $mode = 'r';
-            } else {
-                $mode = 'w';
-            }
-            //$command = 'start /B cmd /C "' . $command;
-            break;
-        default:
-            throw new \Exception('No find os');
+        switch ($this->checkOs()) {
+            case self::OS_LINUX:
+                if ($async) {
+                    $flag = ' > /dev/null &';
+                } else {
+                    $flag = '';
+                }
+                break;
+            case self::OS_WINDOWS:
+                $command = str_replace(';', '&', $command);
+                if ($async) {
+                    $flag = 'r';
+                } else {
+                    $flag = 'w';
+                }
+                break;
+            default:
+                throw new \Exception('No find os');
         }
+
+        return $flag;
     }
 
     const OS_WINDOWS = 1;

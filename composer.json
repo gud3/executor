@@ -7,17 +7,12 @@
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "Eugene Kirichenko",
+            "name": "Evgenii Kirichenko",
             "email": "gud3.ini@gmail.com"
         }
     ],
     "require": {
         "ext-ssh2" : "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "gud3\\executor\\": ""
-        }
     },
     "repositories":[
         {

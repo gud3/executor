@@ -20,15 +20,15 @@ class Local extends ExecuteAbstract implements ExecuteInterface
                 $this->exec($cmd, $async);
             }
         } else {
-            $this->getCommandFlag($command, $async);
+            $flag = $this->getCommandFlag($command, $async);
 
             switch ($this->checkOs()) {
-            case self::OS_WINDOWS:
-                $this->result[] = pclose(popen($command));
-                break;
-            case self::OS_LINUX:
-                $this->result[] = exec($command);
-                break;
+                case self::OS_WINDOWS:
+                    $this->result[] = pclose(popen($command, $flag));
+                    break;
+                case self::OS_LINUX:
+                    $this->result[] = exec($command . $flag);
+                    break;
             }
         }
 
