@@ -1,9 +1,9 @@
 {
-    "name": "gud3/executer",
+    "name": "gud3/executor",
     "description": "This extension works with files both locally and remotely",
-    "type": "executer",
+    "type": "executor",
     "version": "1.0.0",
-    "keywords": ["executer","ssh2", "exec", "exec asunc"],
+    "keywords": ["executor", "ssh2", "exec", "exec-async", "console", "file", "execute-ssh2-command", "set-content-to-file", "ssh2-filling-out-files", "ssh2-file-get-content"],
     "license": "Apache-2.0",
     "authors": [
         {
@@ -16,13 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "gud3\\executer\\": ""
+            "gud3\\executor\\": ""
         }
     },
     "repositories":[
         {
             "type": "git",
-            "url": "https://github.com/gud3/executer"
+            "url": "https://github.com/gud3/executor"
         }
     ]
 }

@@ -1,4 +1,4 @@
-Executer
+Executor
 ===========
 This extension works with files both locally and remotely. It can run commands in console mode. 
 There are two different flags for execution with a response from the command and without (then the script will not wait for execution, an imitation of asynchronous execution).
@@ -13,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Enter run
 
 ```
-php composer.phar require --prefer-dist gud3/executer "*"
+php composer.phar require --prefer-dist gud3/executor "*"
 ```
 
 or add
 
 ```
-"gud3/executer": "*"
+"gud3/executor": "*"
 ```
 
 to the require section of your `composer.json` file.
