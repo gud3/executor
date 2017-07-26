@@ -43,3 +43,27 @@ Also, to execute a number of commands, you can pass an array to a function. And 
 $console = (new gud3\Local())->exec(['command1', 'command2']);
 ```
 
+Usage Ssh2 protocol
+-----
+To connect via the protocol, you must enter the IP address, login and password.
+
+```
+$connect = new gud3\Ssh2($ip, $login, $password, $port);
+$console = $connect->exec('command');
+```
+
+You can get the contents of the file as follows:
+-----
+```
+$local = new gud3\Local();
+$file = $local->getFile($path_to_file, $file_name);
+```
+or remotely
+```
+$local = new gud3\Ssh2($ip, $login, $password, $port);
+$file = $local->getFile($path_to_file, $file_name);
+```
+
+Overwrite the file if it exists. If the file does not exist then it will be created
+-----
+$result = $local->setFile($path_to_file, $file_name, $content);
