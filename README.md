@@ -19,7 +19,7 @@ php composer.phar require --prefer-dist gud3/executor "*"
 or add
 
 ```
-"gud3/executor": "*"
+"gud3/executor": ">=1.0.0"
 ```
 
 to the require section of your `composer.json` file.
@@ -30,19 +30,19 @@ Usage local
 To execute the command locally in the system where the script is located:
 
 ```
-$console = (new gud3\Local())->exec('command');
+$console = (new \gud3\executor\Local())->exec('command');
 ```
 
 The variable in the console will be the result of executing the command line. For asynchronous execution (mostly used to run PHP or other scripts), you must pass the second parameter to true.
 
 ```
-$console = (new gud3\Local())->exec('command', true);
+$console = (new \gud3\executor\Local())->exec('command', true);
 ```
 
 Also, to execute a number of commands, you can pass an array to a function. And they are executed one after another.
 
 ```
-$console = (new gud3\Local())->exec(['command1', 'command2']);
+$console = (new \gud3\executor\Local())->exec(['command1', 'command2']);
 ```
 
 Usage Ssh2 protocol
@@ -50,19 +50,19 @@ Usage Ssh2 protocol
 To connect via the protocol, you must enter the IP address, login and password.
 
 ```
-$connect = new gud3\Ssh2($ip, $login, $password, $port);
+$connect = new \gud3\executor\Ssh2($ip, $login, $password, $port);
 $console = $connect->exec(['command1', 'command2', 'command3']);
 ```
 
 You can get the contents of the file as follows:
 -----
 ```
-$local = new gud3\Local();
+$local = new \gud3\executor\Local();
 $file = $local->getFile($path_to_file, $file_name);
 ```
 or remotely
 ```
-$local = new gud3\Ssh2($ip, $login, $password, $port);
+$local = new \gud3\executor\Ssh2($ip, $login, $password, $port);
 $file = $local->getFile($path_to_file, $file_name);
 ```
 
