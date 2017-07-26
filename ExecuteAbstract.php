@@ -1,10 +1,10 @@
 <?php
 
-namespace common\collections\executer;
+namespace gud3\executor;
 
 /**
  * Class ExecuteAbstract
- * @package common\collections\executer
+ * @package gud3\executor
  */
 abstract class ExecuteAbstract
 {
@@ -44,6 +44,7 @@ abstract class ExecuteAbstract
             }
             break;
         case self::OS_WINDOWS:
+            // TODO review
             //$command = str_replace(';', '&', $command);
             if ($async) {
                 $mode = 'r';

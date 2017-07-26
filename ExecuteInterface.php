@@ -1,10 +1,10 @@
 <?php
 
-namespace common\collections\executer;
+namespace gud3\executor;
 
 /**
  * Interface Execute
- * @package common\collections\executer
+ * @package gud3\executor
  */
 interface ExecuteInterface
 {
@@ -18,7 +18,7 @@ interface ExecuteInterface
     public function exec($command, $async = false);
 
     /**
-     * get result by key(if exec more one command) else no requeider params
+     * get result by key(if exec more one command) else no required params
      * @param $key
      *
      * @return mixed

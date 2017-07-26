@@ -1,6 +1,6 @@
 <?php
 
-namespace common\collections\executer;
+namespace gud3\executor;
 
 /**
  * Class Ssh2

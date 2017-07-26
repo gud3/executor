@@ -1,10 +1,10 @@
 <?php
 
-namespace common\collections\executer;
+namespace gud3\executor;
 
 /**
  * Class Client
- * @package common\collections\executer
+ * @package gud3\executor
  */
 class Local extends ExecuteAbstract implements ExecuteInterface
 {
