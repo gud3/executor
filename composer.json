@@ -2,7 +2,6 @@
     "name": "gud3/executor",
     "description": "This extension works with files both locally and remotely",
     "type": "executor",
-    "version": "1.1.0",
     "keywords": ["executor", "ssh2", "exec", "exec-async", "console", "file", "execute-ssh2-command", "set-content-to-file", "ssh2-filling-out-files", "ssh2-file-get-content"],
     "license": "Apache-2.0",
     "authors": [
